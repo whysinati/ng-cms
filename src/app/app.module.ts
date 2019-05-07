@@ -14,6 +14,7 @@ import { ArticlesService } from './articles.service';
 import { ArticleViewComponent } from './article-view/article-view.component';
 import { ArticleCreateComponent } from './article-create/article-create.component';
 import { ArticleEditComponent } from './article-edit/article-edit.component';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ArticleEditComponent } from './article-edit/article-edit.component';
     ArticlesComponent,
     ArticleViewComponent,
     ArticleCreateComponent,
-    ArticleEditComponent
+    ArticleEditComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
