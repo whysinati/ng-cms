@@ -1,4 +1,21 @@
-<p>
-  auth works!
-</p>
-<app-auth></app-auth>
+<h1>Please sign in / log in</h1>
+
+<form (ngSubmit)="onSubmit()" #logIn="ngForm">
+  
+  <!-- <div *ngIf="errorMessage">{{errorMessage}}</div> -->
+  
+  <div>
+    <label for="username">Username</label>
+    <input [(ngModel)]="user.username" type="text" name="username" id="username">
+    <!-- <div *ngIf="errors.username">{{errors.username.message}}</div> -->
+  </div>
+  <br>
+  <div>
+    <label for="password">Password</label>
+    <input [(ngModel)]="user.password" type="password" name="password" id="password">
+    <!-- <div *ngIf="errors.password">{{errors.password.message}}</div> -->
+  </div>
+  <br>
+  <button type="submit">Login</button>
+  <button type="logout" href="http://localhost:3000/api/auth/logout">Logout</button>
+</form>

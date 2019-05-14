@@ -8,11 +8,12 @@ import { ArticlesComponent }   from './articles/articles.component';
 import { ArticleViewComponent } from './article-view/article-view.component';
 import { ArticleCreateComponent }   from './article-create/article-create.component';
 import { ArticleEditComponent } from './article-edit/article-edit.component';
+import { AuthComponent }   from './auth/auth.component';
 
 // 3. Declare your routes
 const routes: Routes = [
   // 4. The default route
-  { path: '', redirectTo: '/users', pathMatch: 'full' },
+  { path: '', redirectTo: '/auth', pathMatch: 'full' },
   // 5. Map /users to the UsersComponent
   { path: 'users', component: UsersComponent },
   { path: 'users/view/:id', component: UserViewComponent },
@@ -22,7 +23,7 @@ const routes: Routes = [
   { path: 'article/view/:slug', component: ArticleViewComponent },
   { path: 'article/create', component: ArticleCreateComponent },
   { path: 'article/edit/:id', component: ArticleEditComponent },
-
+  { path: 'auth', component: AuthComponent }
 ];
 
 @NgModule({
